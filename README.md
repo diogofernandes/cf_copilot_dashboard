@@ -8,7 +8,13 @@ synthetic demonstration, validated API inputs, temporal evaluation, and a comple
 **Built collaboratively:** Diogo Fernandes and teammates shared contributions across the project.
 This repository is a portfolio adaptation of that team project.
 
-## Try the demo
+## Public interactive showcase
+
+[Open Cash Flow Co-Pilot](https://diogofernandes.github.io/cf_copilot_dashboard/)
+
+The GitHub Pages edition lets visitors load sample invoices and explore the complete workflow using recorded model results. See [deployment details](docs/deployment.md).
+
+## Try the Python demo
 
 Python 3.11 is the tested runtime. No Kaggle, GCP, MLflow or Gemini credentials are required.
 

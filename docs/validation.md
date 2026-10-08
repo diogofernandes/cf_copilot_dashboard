@@ -14,3 +14,5 @@
 - Public deployment remains deferred. No changes have been pushed to the team repository.
 - The self-contained hosting entry point passed the full Chromium workflow and recruiter-tab check locally.
 - CI workflow publication was blocked by the GitHub token's missing workflow scope; local checks passed.
+- Static showcase passed Chromium checks: 24 invoices, seven intervals, ten individual drafts, CSV export, reset, tabs and mobile layout.
+- GitHub Pages deployment built successfully; the public URL passed the same full Chromium workflow.
