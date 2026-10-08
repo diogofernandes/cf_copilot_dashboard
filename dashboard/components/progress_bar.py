@@ -4,8 +4,8 @@ components/progress_bar.py — Pipeline progress indicator + reset button.
 
 import streamlit as st
 
-from constants import STEP_LABELS
-from state import reset_state
+from dashboard.constants import STEP_LABELS
+from dashboard.state import reset_state
 
 
 def render_progress_bar():

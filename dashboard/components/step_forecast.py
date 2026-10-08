@@ -4,10 +4,9 @@ components/step_forecast.py — Step 02: 6-week cashflow forecast.
 
 import streamlit as st
 
-from constants import ICONS
-from services.api import call_predict_cashflow
-from services.mocks import mock_cashflow
-from charts.plotly_charts import build_cashflow_chart
+from dashboard.constants import ICONS
+from dashboard.services.api import call_predict_cashflow
+from dashboard.charts.plotly_charts import build_cashflow_chart
 
 
 def render_step_forecast():
@@ -29,12 +28,15 @@ def render_step_forecast():
     else:
         _, btn_col, _ = st.columns([1, 2, 1])
         with btn_col:
-            if st.button("Generate forecast", key="btn_forecast", use_container_width=True):
+            if st.button("Generate forecast", key="btn_forecast", width="stretch"):
                 with st.spinner("Forecasting cash flow..."):
-                    result, err = call_predict_cashflow(st.session_state.uploaded_bytes)
+                    result, err = call_predict_cashflow(st.session_state.uploaded_bytes, st.session_state.reference_date)
                     if result is None:
-                        st.info(err)
-                        result = mock_cashflow(st.session_state.df)
+                        st.error(err)
+                        return
+                    st.session_state.predictions_df = None
+                    st.session_state.selected_invoice = None
+                    st.session_state.ai_result = None
                     st.session_state.weekly_forecast = result
                     st.session_state.step = max(st.session_state.step, 3)
 
@@ -49,6 +51,11 @@ def _show_forecast_results(wf):
     import pandas as pd
 
     wf = wf.copy().sort_values("week_bucket")
+    tail = wf.loc[wf["week_bucket"] == 7, "forecast_cash"].sum()
+    wf = wf[wf["week_bucket"] <= 6].copy()
+    if wf.empty:
+        st.error("No finite forecast intervals returned.")
+        return
     total_forecast = wf["forecast_cash"].sum()
     week_max = wf.loc[wf["forecast_cash"].idxmax(), "week_bucket"]
 
@@ -76,13 +83,13 @@ def _show_forecast_results(wf):
 
     st.plotly_chart(
         build_cashflow_chart(wf),
-        use_container_width=True,
+        width="stretch",
         config={"displaylogo": False, "modeBarButtonsToRemove": ["lasso2d", "select2d"]},
     )
 
     wf["Week"] = wf["week_bucket"].apply(lambda x: f"Week {x}")
     wf["Amount"] = wf["forecast_cash"].apply(lambda x: f"${x:,.0f}")
-    wf["Share"] = (wf["forecast_cash"] / wf["forecast_cash"].sum() * 100).apply(
+    wf["Share"] = (wf["forecast_cash"] / max(wf["forecast_cash"].sum(), 1e-12) * 100).apply(
         lambda x: f"{x:.1f}%"
     )
     wf["Cumulative"] = wf["forecast_cash"].cumsum().apply(lambda x: f"${x:,.0f}")
@@ -145,3 +152,5 @@ def _show_forecast_results(wf):
     )
 
     st.markdown(table_html, unsafe_allow_html=True)
+    st.caption("Expected after 42 days: $" + f"{tail:,.0f}. This is an open-ended tail, not week 7.")
+    st.download_button("Download forecast", st.session_state.weekly_forecast.to_csv(index=False), "forecast.csv", "text/csv")

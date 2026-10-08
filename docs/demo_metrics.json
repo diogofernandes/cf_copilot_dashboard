@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "dataset": "synthetic, seed 42",
+  "reference_date": "2024-10-01",
+  "training_cutoff": "2024-03-17",
+  "training_rows": 5841,
+  "holdout_rows": 2557,
+  "known_labels_only": true,
+  "metrics": {
+    "model_accuracy": 0.4517012123582323,
+    "baseline_accuracy": 0.18771998435666798,
+    "model_log_loss": 1.4341014313422338,
+    "baseline_log_loss": 1.9158481654418178,
+    "forecast_mae_weekly": 36525.20851851851,
+    "forecast_mape_weekly": 0.851111111111111,
+    "forecast_total_actual_cf": 604293.7959259258,
+    "forecast_total_forecast_cf": 592703.6159259259,
+    "forecast_total_cf_difference": -11590.179999999997
+  },
+  "limitation": "Synthetic demonstration; these metrics do not establish real-world performance."
+}

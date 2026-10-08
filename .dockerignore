@@ -1,0 +1,16 @@
+.git
+.env
+.env.*
+.backups
+.venv
+raw_data
+notebooks
+__pycache__
+**/__pycache__
+*.old
+*.new
+*.pt
+mlflow.db
+data/raw
+data/chroma_db
+.portfolio*

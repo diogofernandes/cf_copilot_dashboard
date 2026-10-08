@@ -4,7 +4,7 @@ constants.py — Shared constants and configuration for Cash Flow Copilot.
 
 import os
 
-API_URL = os.environ.get("API_URL", "http://localhost:8000")
+API_URL = os.environ.get("API_URL", "http://localhost:8080")
 
 RISK_LABELS = {
     1: "Low",
@@ -13,6 +13,7 @@ RISK_LABELS = {
     4: "Very High",
     5: "Critical",
     6: "Critical",
+    7: "Critical",
 }
 
 RISK_COLORS = {
@@ -22,6 +23,7 @@ RISK_COLORS = {
     4: "#ff6b35",
     5: "#ff4d6d",
     6: "#ff0055",
+    7: "#ff0055",
 }
 
 # String-keyed variants for the /prioritise_invoices response

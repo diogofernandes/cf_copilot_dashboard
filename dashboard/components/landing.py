@@ -4,7 +4,7 @@ components/landing.py — Static marketing sections: nav, hero, feature cards, C
 
 import streamlit as st
 
-from constants import ICONS
+from dashboard.constants import ICONS
 
 
 def render_nav():
@@ -45,7 +45,7 @@ def render_hero():
         </div>
         <div class="hero-sub">
             Upload your receivables and our AI predicts payment risks, forecasts
-            cashflow, and sends smart collection emails — all in one platform.
+            cashflow, and drafts smart collection emails — all in one platform.
         </div>
         <div class="hero-btns">
             <a href="#upload-section" style="text-decoration:none;">
@@ -131,8 +131,8 @@ def render_cta_banner():
     st.markdown("""
     <div class="cta-section">
         <div class="cta-title">Stop chasing payments.<br><span class="accent">Start predicting them.</span></div>
-        <div class="cta-sub">Join finance teams who reduced overdue receivables by up to 40%
-        with AI-powered cashflow predictions.</div>
+        <div class="cta-sub">Explore payment forecasts and collection drafts
+        with a reproducible portfolio demonstration.</div>
         <a href="#upload-section" style="text-decoration:none;">
             <button class="btn-primary">Get Started — It's Free</button>
         </a>

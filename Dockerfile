@@ -1,23 +1,10 @@
-FROM --platform=linux/amd64 python:3.10-slim
-
+FROM python:3.11-slim
 WORKDIR /app
-
-# Install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 && rm -rf /var/lib/apt/lists/*
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy project
-COPY dashboard/ dashboard/
-COPY setup.py .
-RUN pip install --no-cache-dir -e .
-
-ENV PORT=8501
-EXPOSE 8501
-
-HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
-    CMD curl -f http://localhost:8501/_stcore/health || exit 1
-
-CMD ["streamlit", "run", "dashboard/app.py", \
-     "--server.port=8501", \
-     "--server.address=0.0.0.0", \
-     "--server.headless=true"]
+COPY cf_copilot cf_copilot
+COPY data/playbook data/playbook
+ENV DEMO_MODE=1
+EXPOSE 8080
+CMD ["uvicorn", "cf_copilot.api.fast:app", "--host", "0.0.0.0", "--port", "8080"]

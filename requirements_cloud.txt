@@ -1,0 +1,7 @@
+-r requirements.txt
+google-cloud-storage>=2,<4
+kagglehub[pandas-datasets]>=0.3,<2
+mlflow>=2.20,<4
+langchain-chroma>=0.2,<2
+langchain-google-genai>=2,<5
+langchain-text-splitters>=0.3,<2

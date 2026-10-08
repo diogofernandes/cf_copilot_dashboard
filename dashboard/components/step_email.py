@@ -2,12 +2,12 @@
 components/step_email.py — Step 04: RAG-powered AI explanation and collection email.
 """
 
+from html import escape
 import streamlit as st
 
-from constants import ICONS, RISK_LABELS, RISK_COLORS
-from services.api import call_rag_script
-from services.mocks import mock_rag
-from charts.plotly_charts import build_risk_gauge
+from dashboard.constants import ICONS, RISK_LABELS, RISK_COLORS
+from dashboard.services.api import call_rag_script
+from dashboard.charts.plotly_charts import build_risk_gauge
 
 
 def _fmt_id(val) -> str:
@@ -50,7 +50,7 @@ def render_step_email():
                     margin-bottom:0.5rem;">{ICONS["mail"]}</div>
         <span class="snum">STEP 04</span>
         <span class="stitle">AI Explanation & Email</span>
-        <span class="sdesc">RAG pipeline generates a collection email tailored to the risk profile.</span>
+        <span class="sdesc">Prepare a collection draft tailored to the risk profile. Human review required.</span>
     </div>
     """, unsafe_allow_html=True)
 
@@ -69,15 +69,15 @@ def render_step_email():
 
     with col_left:
         _render_invoice_summary(invoice, bucket, risk_color)
-        st.plotly_chart(build_risk_gauge(bucket), use_container_width=True)
+        st.plotly_chart(build_risk_gauge(float(invoice.get("risk_score", 0))), width="stretch")
 
     with col_right:
-        if st.button("Generate AI script", use_container_width=True, key="btn_rag"):
-            with st.spinner("Retrieving playbook · Calling LLM..."):
+        if st.button("Generate AI script", width="stretch", key="btn_rag"):
+            with st.spinner("Preparing collection draft..."):
                 result, err = call_rag_script(invoice)
                 if result is None:
-                    st.info(err)
-                    result = mock_rag(invoice)
+                    st.error(err)
+                    return
                 st.session_state.ai_result = result
                 st.session_state.step = max(st.session_state.step, 5)
 
@@ -92,15 +92,15 @@ def _render_invoice_summary(invoice: dict, bucket: int, risk_color: str):
                     letter-spacing:0.06em;margin-bottom:1rem;">Selected invoice</div>
         <div style="font-family:'DM Mono',monospace;font-size:0.82rem;color:#c9d4e8;line-height:2.2;">
             <span style="color:#6b7fa3;">Invoice ID</span><br>
-            <b>{_fmt_id(invoice.get('doc_id','N/A'))}</b><br>
+            <b>{escape(_fmt_id(invoice.get('doc_id','N/A')))}</b><br>
             <span style="color:#6b7fa3;">Customer</span><br>
-            <b>{invoice.get('name_customer','N/A')}</b><br>
+            <b>{escape(str(invoice.get('name_customer','N/A')))}</b><br>
             <span style="color:#6b7fa3;">Amount</span><br>
             <b>${float(invoice.get('total_open_amount',0)):,.0f}</b><br>
             <span style="color:#6b7fa3;">Days overdue</span><br>
             <b style="color:#ff4d6d;">{invoice.get('days_overdue',0)}</b><br>
             <span style="color:#6b7fa3;">Risk level</span><br>
-            <b style="color:{risk_color};">{RISK_LABELS.get(bucket,'—')} (week {bucket})</b><br>
+            <b style="color:{risk_color};">{escape(str(invoice.get('risk_category', 'Unknown')))} ({float(invoice.get('risk_score', 0)):.0%})</b><br>
             <span style="color:#6b7fa3;">Late ratio</span><br>
             <b>{float(invoice.get('cust_late_ratio',0)):.0%}</b>
         </div>
@@ -128,17 +128,18 @@ def _render_email_result(res: dict, invoice: dict):
             <div style="text-align:center;padding:0.6rem;border-radius:8px;
                         background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);">
                 <div style="font-size:0.68rem;color:#6b7fa3;text-transform:uppercase;">{label}</div>
-                <div style="font-size:0.9rem;font-weight:600;color:{color};">{val}</div>
+                <div style="font-size:0.9rem;font-weight:600;color:{color};">{escape(str(val))}</div>
             </div>""", unsafe_allow_html=True)
 
-    subject = _fix_body(res.get("subject", ""), invoice)
-    body    = _fix_body(res.get("email_body", ""), invoice)
+    subject = escape(_fix_body(res.get("subject", ""), invoice))
+    body    = escape(_fix_body(res.get("email_body", ""), invoice)).replace("\n", "<br>")
 
+    st.caption("Provider: " + res.get("provider", "unknown") + " · Draft only; no email is sent.")
     st.markdown(f"<br>**Subject:** {subject}", unsafe_allow_html=True)
     st.markdown(f'<div class="email-box">{body}</div>', unsafe_allow_html=True)
     st.markdown(f"""<br>
     <div style="background:rgba(0,212,170,0.04);border:1px solid rgba(0,212,170,0.12);
                 border-radius:8px;padding:0.8rem;font-size:0.82rem;color:#6b7fa3;">
-        <b style="color:#00d4aa;">Reasoning:</b> {res.get('reasoning','')}<br>
-        <b style="color:#00d4aa;">Playbook ref:</b> {res.get('playbook_reference','')}
+        <b style="color:#00d4aa;">Reasoning:</b> {escape(res.get('reasoning',''))}<br>
+        <b style="color:#00d4aa;">Playbook ref:</b> {escape(res.get('playbook_reference',''))}
     </div>""", unsafe_allow_html=True)

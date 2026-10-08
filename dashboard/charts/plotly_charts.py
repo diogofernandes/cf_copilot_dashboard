@@ -4,7 +4,7 @@ charts/plotly_charts.py — Plotly figure builders for the dashboard.
 
 import plotly.graph_objects as go
 
-from constants import RISK_COLORS
+from dashboard.constants import RISK_COLORS
 
 
 def build_cashflow_chart(df):
@@ -65,32 +65,18 @@ def build_cashflow_chart(df):
     return fig
 
 
-def build_risk_gauge(bucket: int):
-    """Small gauge chart for individual invoice risk level."""
-    color = RISK_COLORS.get(bucket, "#ff4d6d")
+def build_risk_gauge(probability: float):
+    value = max(0, min(1, probability)) * 100
+    color = "#00d4aa" if probability < .2 else "#ffa94d" if probability < .5 else "#ff4d6d"
     fig = go.Figure(go.Indicator(
-        mode="gauge+number",
-        value=bucket,
+        mode="gauge+number", value=value, number={"suffix": "%", "font": {"color": color, "size": 28}},
         domain={"x": [0, 1], "y": [0, 1]},
-        gauge={
-            "axis": {"range": [1, 6], "tickfont": {"color": "#6b7fa3", "size": 10}},
-            "bar": {"color": color},
-            "bgcolor": "rgba(255,255,255,0.03)",
-            "bordercolor": "rgba(255,255,255,0.1)",
-            "steps": [
-                {"range": [1, 2], "color": "rgba(0,212,170,0.1)"},
-                {"range": [2, 3], "color": "rgba(77,159,255,0.1)"},
-                {"range": [3, 4], "color": "rgba(255,169,77,0.1)"},
-                {"range": [4, 5], "color": "rgba(255,107,53,0.1)"},
-                {"range": [5, 6], "color": "rgba(255,77,109,0.1)"},
-            ],
-        },
-        number={"font": {"color": color, "size": 28}},
-    ))
-    fig.update_layout(
-        paper_bgcolor="rgba(0,0,0,0)",
-        font=dict(family="Inter"),
-        margin=dict(l=10, r=10, t=10, b=10),
-        height=160,
-    )
+        gauge={"axis": {"range": [0, 100], "tickfont": {"color": "#6b7fa3", "size": 10}},
+               "bar": {"color": color}, "bgcolor": "rgba(255,255,255,0.03)",
+               "bordercolor": "rgba(255,255,255,0.1)",
+               "steps": [{"range": [0, 20], "color": "rgba(0,212,170,0.1)"},
+                         {"range": [20, 50], "color": "rgba(255,169,77,0.1)"},
+                         {"range": [50, 100], "color": "rgba(255,77,109,0.1)"}]}))
+    fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", font={"family": "Inter"},
+                      margin={"l": 10, "r": 10, "t": 10, "b": 10}, height=160)
     return fig
