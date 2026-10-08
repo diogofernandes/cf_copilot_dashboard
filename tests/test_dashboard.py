@@ -86,6 +86,5 @@ def test_recruiter_case_study_is_available(dashboard):
  assert [tab.label for tab in dashboard.tabs] == ["Cash Flow Co-Pilot", "About the project"]
  text = "\n".join(item.value for item in dashboard.markdown)
  assert "Why it fits this problem" in text
- assert "Built collaboratively" in text
  assert any("synthetic demonstration results" in info.value for info in dashboard.info)
  assert any("45.2%" == metric.value for metric in dashboard.metric)

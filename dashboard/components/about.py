@@ -8,8 +8,6 @@ ROOT = Path(__file__).resolve().parents[2]
 def render_about():
     st.title("About Cash Flow Co-Pilot")
     st.markdown("**An end-to-end machine-learning project for forecasting invoice payments and supporting collections.**")
-    st.markdown("Built collaboratively by **Diogo Fernandes and teammates**, with shared contributions across the project. "
-                "Diogo also built the frontend during the course. This portfolio edition preserves that frontend and adds a reproducible demonstration and reliability fixes.")
     st.subheader("The business problem")
     st.write("Finance teams need to anticipate cash receipts and decide which outstanding invoices deserve attention. "
              "An invoice due date expresses a contractual deadline; a payment forecast estimates when cash may actually arrive.")
@@ -48,9 +46,6 @@ This is the rationale for the current model, rather than a claim that it beats e
     st.subheader("Technology and architecture")
     st.write("Streamlit and Plotly provide the frontend; FastAPI validates and serves requests; pandas prepares data; "
              "scikit-learn and XGBoost provide the model. Regression tests cover the API and complete dashboard workflow.")
-    st.code("Invoice CSV → validation + historical features → XGBoost probabilities\n"
-            "                                             ↓\n"
-            "                         cash forecast + collection ranking → draft", language="text")
     st.write("The default demonstration uses deterministic local collection rules. The project also includes an optional "
              "Gemini retrieval integration with example playbooks. The demo does not call an external LLM.")
     st.subheader("Limitations and next steps")
