@@ -1,0 +1,103 @@
+
+    <style>
+    .nav-link, .nav-cta {
+        display: inline-block !important;
+        padding: 0.6rem 1.2rem !important;
+        cursor: pointer !important;
+        pointer-events: auto !important;
+        position: relative !important;
+        z-index: 9999 !important;
+    }
+    /* remove qualquer overlay que possa estar por cima */
+    [data-testid="stMarkdown"] {
+        pointer-events: auto !important;
+    }
+    </style>
+    <div class="nav">
+        <div class="nav-logo">Cash Flow <span>Co-Pilot</span></div>
+        <div class="nav-links">
+            <a href="#how-it-works" class="nav-link">How It Works</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#upload-section" class="nav-cta">Get Started</a>
+        </div>
+    </div>
+    
+    <div class="hero">
+        <div class="hero-badge">AI-POWERED CASHFLOW INTELLIGENCE</div>
+        <div class="hero-title">
+            <span class="word">Predict.</span>&nbsp;
+            <span class="word">Protect.</span><br>
+            <span class="word accent-word">Get Paid.</span>
+        </div>
+        <div class="hero-sub">Explore sample receivables, forecast cash flow and prepare collection drafts — all in one platform.</div>
+        <div class="hero-btns">
+            <a href="#upload-section" style="text-decoration:none;">
+                <button class="btn-primary">Try the Sample Demo</button>
+            </a>
+            <a href="#how-it-works" style="text-decoration:none;">
+                <button class="btn-secondary">See How It Works</button>
+            </a>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;width:100%;overflow:hidden;line-height:0;pointer-events:none;">
+            <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:120px;">
+                <defs>
+                    <style>
+                        .wave1{animation:wave-move 8s linear infinite}
+                        .wave2{animation:wave-move 12s linear infinite reverse}
+                        .wave3{animation:wave-move 6s linear infinite}
+                        @keyframes wave-move{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+                    </style>
+                </defs>
+                <g class="wave1"><path d="M0,60 C180,20 360,100 540,60 C720,20 900,100 1080,60 C1260,20 1440,100 1620,60 C1800,20 1980,100 2160,60 C2340,20 2520,100 2700,60 C2880,20 3060,100 3240,60 L3240,120 L0,120 Z" fill="none" stroke="rgba(0,212,170,0.3)" stroke-width="1.5"/></g>
+                <g class="wave2"><path d="M0,75 C200,35 400,115 600,75 C800,35 1000,115 1200,75 C1400,35 1600,115 1800,75 C2000,35 2200,115 2400,75 C2600,35 2800,115 3000,75 C3200,35 3400,115 3600,75 L3600,120 L0,120 Z" fill="none" stroke="rgba(0,212,170,0.15)" stroke-width="1"/></g>
+                <g class="wave3"><path d="M0,85 C150,55 300,115 450,85 C600,55 750,115 900,85 C1050,55 1200,115 1350,85 C1500,55 1650,115 1800,85 C1950,55 2100,115 2250,85 C2400,55 2550,115 2700,85 L2700,120 L0,120 Z" fill="rgba(0,212,170,0.04)" stroke="rgba(0,212,170,0.08)" stroke-width="0.5"/></g>
+            </svg>
+        </div>
+    </div>
+    <div id="how-it-works"></div>
+    <div class="section">
+        <div class="section-label">HOW IT WORKS</div>
+        <div class="section-title">Four steps to <span class="accent">cashflow clarity</span></div>
+        <div class="section-sub">From raw CSV to actionable intelligence in minutes, not days.</div>
+    </div>
+    <div class="feature-grid" id="features">
+            <div class="feat-card-hover">
+                <div class="card-num" style="color:rgba(0,212,170,0.55);">01</div>
+                <div style="width:44px;height:44px;background:rgba(0,212,170,0.15);
+                            border:1px solid rgba(0,212,170,0.35);border-radius:12px;
+                            display:flex;align-items:center;justify-content:center;
+                            margin-bottom:1.2rem;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+                <div class="card-title" style="color:#ffffff;">Upload CSV</div>
+                <div class="card-desc" style="color:#c8d4e8;">Drop your accounts receivable file. We parse invoices, amounts, due dates, and customer history instantly.</div>
+            </div>
+            
+            <div class="feat-card-hover">
+                <div class="card-num" style="color:rgba(0,212,170,0.55);">02</div>
+                <div style="width:44px;height:44px;background:rgba(0,212,170,0.15);
+                            border:1px solid rgba(0,212,170,0.35);border-radius:12px;
+                            display:flex;align-items:center;justify-content:center;
+                            margin-bottom:1.2rem;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                <div class="card-title" style="color:#ffffff;">Forecast Cash Flow</div>
+                <div class="card-desc" style="color:#c8d4e8;">Get a 6-week cashflow projection built from real payment behaviour — weekly inflow breakdown with cumulative view.</div>
+            </div>
+            
+            <div class="feat-card-hover">
+                <div class="card-num" style="color:rgba(0,212,170,0.55);">03</div>
+                <div style="width:44px;height:44px;background:rgba(0,212,170,0.15);
+                            border:1px solid rgba(0,212,170,0.35);border-radius:12px;
+                            display:flex;align-items:center;justify-content:center;
+                            margin-bottom:1.2rem;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="card-title" style="color:#ffffff;">Predict Payment Risk</div>
+                <div class="card-desc" style="color:#c8d4e8;">Our ML model surfaces the top 10 riskiest invoices. Select one to see exactly why it was flagged — right there in the panel.</div>
+            </div>
+            
+            <div class="feat-card-hover">
+                <div class="card-num" style="color:rgba(0,212,170,0.55);">04</div>
+                <div style="width:44px;height:44px;background:rgba(0,212,170,0.15);
+                            border:1px solid rgba(0,212,170,0.35);border-radius:12px;
+                            display:flex;align-items:center;justify-content:center;
+                            margin-bottom:1.2rem;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                <div class="card-title" style="color:#ffffff;">AI Explanation & Email</div>
+                <div class="card-desc" style="color:#c8d4e8;">Explore invoice risk and a personalised sample collection draft prepared with local policy rules.</div>
+            </div>
+            </div>
