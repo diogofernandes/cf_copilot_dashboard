@@ -895,6 +895,6 @@
       "forecast_total_forecast_cf": 592703.6159259259,
       "forecast_total_cf_difference": -11590.179999999997
     },
-    "limitation": "Synthetic demonstration; these metrics do not establish real-world performance."
+    "limitation": "Synthetic demonstration, these metrics do not establish real-world performance."
   }
 }

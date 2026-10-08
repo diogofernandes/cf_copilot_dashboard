@@ -42,7 +42,7 @@ with TestClient(app) as client:
             "forecast":request("/predict_cashflow"),"rankings":rankings,
             "predictions":request("/predict")["predictions"],"drafts":drafts,
             "metrics":json.loads((ROOT/"docs/demo_metrics.json").read_text())}
-(OUT/"demo-data.json").write_text(json.dumps(data, indent=2))
+(OUT/"demo-data.json").write_text(json.dumps(data, indent=2).replace("; ", ", "))
 (OUT/"sample-invoices.csv").write_bytes(csv)
 
 def md(text):
