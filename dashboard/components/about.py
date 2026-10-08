@@ -10,7 +10,7 @@ def render_about():
     st.markdown("**An end-to-end machine-learning project for forecasting invoice payments and supporting collections.**")
     st.subheader("The business problem")
     st.write("Finance teams need to anticipate cash receipts and decide which outstanding invoices deserve attention. "
-             "An invoice due date expresses a contractual deadline; a payment forecast estimates when cash may actually arrive.")
+             "An invoice due date expresses a contractual deadline, a payment forecast estimates when cash may actually arrive.")
     st.subheader("Try it in two minutes")
     st.write("Open the Cash Flow Co-Pilot tab, load the 24 sample invoices, generate a forecast, run risk predictions, "
              "select an invoice, then generate a collection draft. The sample uses synthetic data at reference date 1 October 2024.")

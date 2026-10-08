@@ -87,7 +87,7 @@ about.st=cap;about.render_about();explanation="".join(cap.html)
 explanation=explanation.replace("The default demonstration uses deterministic local collection rules.",
                                "This GitHub Pages showcase uses recorded XGBoost results for the supplied synthetic invoices. No Python server runs in your browser. The sample drafts were prepared with deterministic local collection rules.")
 (OUT/"landing.html").write_text(nav+hero+features)
-(OUT/"about.html").write_text(explanation)
+(OUT/"about.html").write_text(explanation.replace("; ", ", "))
 (OUT/"original-theme.css").write_text(_CSS.replace("<style>","").replace("</style>",""))
 print("Static showcase generated:",len(data["invoices"]),"invoices,",len(drafts),"drafts")
 print("Ranking keys:",list(rankings[0]))
