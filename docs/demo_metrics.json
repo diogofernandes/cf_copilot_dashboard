@@ -1,21 +1,23 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "dataset": "synthetic, seed 42",
+  "estimator": "RandomForestClassifier",
+  "temporal_split_fraction": 0.8,
   "reference_date": "2024-10-01",
-  "training_cutoff": "2024-03-17",
-  "training_rows": 5841,
-  "holdout_rows": 2557,
+  "training_cutoff": "2024-05-19",
+  "training_rows": 6689,
+  "holdout_rows": 1700,
   "known_labels_only": true,
   "metrics": {
-    "model_accuracy": 0.4517012123582323,
-    "baseline_accuracy": 0.18771998435666798,
-    "model_log_loss": 1.4341014313422338,
-    "baseline_log_loss": 1.9158481654418178,
-    "forecast_mae_weekly": 36525.20851851851,
-    "forecast_mape_weekly": 0.851111111111111,
-    "forecast_total_actual_cf": 604293.7959259258,
-    "forecast_total_forecast_cf": 592703.6159259259,
-    "forecast_total_cf_difference": -11590.179999999997
+    "model_accuracy": 0.4447058823529412,
+    "baseline_accuracy": 0.18235294117647058,
+    "model_log_loss": 1.271843981480559,
+    "baseline_log_loss": 1.9157866789915459,
+    "forecast_mae_weekly": 29343.798333333332,
+    "forecast_mape_weekly": 0.4038888888888889,
+    "forecast_total_actual_cf": 608532.3027777779,
+    "forecast_total_forecast_cf": 615047.88,
+    "forecast_total_cf_difference": 6515.577222222223
   },
   "limitation": "Synthetic demonstration; these metrics do not establish real-world performance."
 }

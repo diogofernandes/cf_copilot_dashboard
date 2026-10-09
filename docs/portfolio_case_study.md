@@ -29,7 +29,7 @@ validation, corrected prediction alignment, temporal label availability and regr
 6. Show the API documentation, tests, model card and baseline comparison.
 
 ## Claims to make
-Built a collaborative end-to-end invoice intelligence prototype using XGBoost, FastAPI and Streamlit.
+Built a collaborative end-to-end invoice intelligence prototype using Random Forest, FastAPI and Streamlit.
 Created a local demonstration with validated inputs, consistent payment intervals and temporally constrained evaluation.
 Integrated optional playbook retrieval for reviewable collection drafts.
 

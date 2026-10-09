@@ -85,7 +85,7 @@ features=features.replace("RAG-powered insights explain each risk score, then dr
                           "Explore invoice risk and a personalised sample collection draft prepared with local policy rules.")
 about.st=cap;about.render_about();explanation="".join(cap.html)
 explanation=explanation.replace("The default demonstration uses deterministic local collection rules.",
-                               "This GitHub Pages showcase uses recorded XGBoost results for the supplied synthetic invoices. No Python server runs in your browser. The sample drafts were prepared with deterministic local collection rules.")
+                               "This GitHub Pages showcase uses recorded Random Forest results for the supplied synthetic invoices. No Python server runs in your browser. The sample drafts were prepared with deterministic local collection rules.")
 (OUT/"landing.html").write_text(nav+hero+features)
 (OUT/"about.html").write_text(explanation.replace("; ", ", "))
 (OUT/"original-theme.css").write_text(_CSS.replace("<style>","").replace("</style>",""))

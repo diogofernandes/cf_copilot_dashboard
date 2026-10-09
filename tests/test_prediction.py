@@ -121,3 +121,13 @@ def test_training_never_uses_future_payment_labels():
     assert train.index.tolist() == [0]
     assert test.index.tolist() == [2]
     assert (train.invoice_paid <= pd.Timestamp("2024-02-01")).all()
+
+
+def test_demo_estimator_matches_documented_random_forest():
+    from sklearn.ensemble import RandomForestClassifier
+    from cf_copilot.demo import prepare_demo
+    model, _, metadata = prepare_demo()
+    assert isinstance(model.named_steps["classifier"], RandomForestClassifier)
+    assert metadata["estimator"] == "RandomForestClassifier"
+    assert metadata["temporal_split_fraction"] == 0.8
+    assert "categorical" in model.named_steps["preprocessor"].named_transformers_

@@ -6,9 +6,7 @@ A trained model can support review of receivables; it does not decide credit, pa
 or legal action. The default model is fitted to reproducible synthetic data.
 
 ## Features and model
-Seven numeric features: invoice age, days until due, payment terms, historical mean delay,
-days since the customer's last invoice, log amount, and cyclic invoice month.
-A scikit-learn pipeline imputes medians and fits XGBoost, using seed 42.
+Invoice timing, customer behaviour and amount features feed a scikit-learn pipeline. Numeric features use median imputation, and invoice size uses ordinal encoding. A RandomForestClassifier combines tree predictions using seed 42.
 Internal classes 0–6 map consistently to public buckets 1–7.
 
 ## Prediction intervals
@@ -35,7 +33,7 @@ the current classifier does not estimate nonpayment and may overstate receipts o
 ## Probability and cash assumptions
 Model probabilities are used directly. Arbitrary sharpening has been removed.
 Calibration curves are diagnostics; they do not mean probabilities have been calibrated.
-No confidence interval is estimated. A class-prior baseline may outperform XGBoost on a different distribution.
+No confidence interval is estimated. A class-prior baseline may outperform Random Forest on a different distribution.
 Amounts are converted to USD. Historical CAD conversion rates:
 2018 0.771, 2019 0.754, 2020 0.745; other years use 0.75.
 These are illustrative approximations, unsuitable for live accounting without supplied FX rates.
@@ -58,3 +56,7 @@ Synthetic behavior is deliberately learnable and cannot substantiate production 
 Dataset age, customer mix, changing payment terms and economic conditions can shift model behavior.
 Snapshot repetition and eventual-payment selection affect reported metrics.
 There is no fairness analysis, drift monitoring, survival model, fitted calibration or causal outcome evaluation.
+
+## Project provenance
+Final Le Wagon team project: https://github.com/EwaltsJ/cf_copilot
+The original README specifies Random Forest, but the current team model.py instantiates XGBoost. This portfolio demonstration follows the README at the user's request. Synthetic results are newly generated with RandomForestClassifier, not the original team's historical metrics.

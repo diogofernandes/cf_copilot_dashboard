@@ -14,7 +14,7 @@ from cf_copilot.ml_logic.schema import public_probabilities
 
 DEMO_DATE = pd.Timestamp("2024-10-01")
 DEMO_DIR = BASE_DIR / "raw_data" / "demo"
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 
 
 def synthetic_history(size=1600):
@@ -74,7 +74,7 @@ def prepare_demo(force=False):
             )
     history = synthetic_history()
     snapshots = build_sliding_window_snapshots(history)
-    cutoff = snapshots["reference_date"].quantile(0.7)
+    cutoff = snapshots["reference_date"].quantile(0.8)
     train = snapshots[(snapshots["reference_date"] <= cutoff) & (snapshots["invoice_paid"] <= cutoff)]
     test = snapshots[snapshots["reference_date"] > cutoff]
     X_train, y_train = preprocess(train)
@@ -82,7 +82,7 @@ def prepare_demo(force=False):
     if set(y_train.unique()) != set(range(7)):
         raise ValueError("Training needs all seven buckets.")
     model = initialize_model()
-    model.set_params(classifier__n_estimators=80, classifier__max_depth=5)
+    model.set_params(classifier__n_estimators=160, classifier__max_depth=12)
     model.fit(X_train, y_train)
     baseline = DummyClassifier(strategy="prior").fit(X_train, y_train)
     metrics = {
@@ -100,6 +100,8 @@ def prepare_demo(force=False):
     metadata = {
         "schema_version": SCHEMA_VERSION,
         "dataset": "synthetic, seed 42",
+        "estimator": "RandomForestClassifier",
+        "temporal_split_fraction": 0.8,
         "reference_date": str(DEMO_DATE.date()),
         "training_cutoff": str(cutoff.date()),
         "training_rows": len(train),

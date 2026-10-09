@@ -1,6 +1,8 @@
 # CF Copilot
 ### Invoice payment timing · cash-flow forecasts · collection drafts
 
+A final Le Wagon team project ([original repository](https://github.com/EwaltsJ/cf_copilot)).
+
 A team-built machine-learning application for exploring when outstanding invoices may be paid,
 estimating expected receipts, and prioritising collection work. This portfolio edition adds a reproducible
 synthetic demonstration, validated API inputs, temporal evaluation, and a complete local workflow.
@@ -71,7 +73,7 @@ Functional fixes connect it to validated API responses and clear stale results w
 
 1. Validates invoice dates, identifiers, amounts and currencies.
 2. Computes invoice timing and customer-history features using facts available at the reference date.
-3. Uses a median-imputation + XGBoost pipeline to estimate seven payment intervals.
+3. Uses a median-imputation + Random Forest pipeline to estimate seven payment intervals.
 4. Aggregates expected cash as amount × interval probability.
 5. Ranks invoices with a transparent collections heuristic.
 6. Produces a collection draft for human review, with an explicitly named provider.
@@ -81,7 +83,7 @@ flowchart LR
     CSV[Outstanding invoices] --> V[Validation]
     H[Observed customer history] --> F[Feature engineering]
     V --> F
-    F --> M[XGBoost pipeline]
+    F --> M[Random Forest pipeline]
     M --> P[Payment probabilities]
     P --> C[Expected cash by interval]
     P --> R[Collection priorities]
@@ -129,7 +131,7 @@ API failures never produce random mock predictions.
 ## Evaluation and limitations
 
 The synthetic demonstration uses a temporal holdout with **only payment labels known by the training cutoff**.
-It compares XGBoost with a class-prior baseline and reports classification and cash-flow errors.
+It compares Random Forest with a class-prior baseline and reports classification and cash-flow errors.
 See [recorded metrics](docs/demo_metrics.json) and the [model card](docs/model_card.md).
 
 Synthetic results demonstrate engineering behavior, not customer outcomes or real-world generalization.

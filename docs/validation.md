@@ -1,6 +1,6 @@
-# Validation — 2026-10-08
+# Validation — 2026-10-09
 
-- 28 regression tests passed in the project Python 3.11 environment.
+- 29 regression tests passed in the project Python 3.11 environment.
 - Ruff checks passed across the backend, dashboard and tests.
 - Original course theme CSS is protected by a fingerprint regression test.
 - Synthetic demo model trained and evaluated; results recorded in demo_metrics.json.
@@ -16,3 +16,7 @@
 - CI workflow publication was blocked by the GitHub token's missing workflow scope; local checks passed.
 - Static showcase passed Chromium checks: 24 invoices, seven intervals, ten individual drafts, CSV export, reset, tabs and mobile layout.
 - GitHub Pages deployment built successfully; the public URL passed the same full Chromium workflow.
+- Portfolio model changed to RandomForestClassifier to follow the original team README.
+- Numeric median imputation and ordinal invoice-size encoding verified.
+- Synthetic demonstration regenerated with an 80/20 temporal cutoff and newly computed metrics.
+- Original team repository and Le Wagon final-project attribution added.

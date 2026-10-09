@@ -87,4 +87,6 @@ def test_recruiter_case_study_is_available(dashboard):
  text = "\n".join(item.value for item in dashboard.markdown)
  assert "Why it fits this problem" in text
  assert any("synthetic demonstration results" in info.value for info in dashboard.info)
- assert any("45.2%" == metric.value for metric in dashboard.metric)
+ report = __import__("json").loads((ROOT/"docs/demo_metrics.json").read_text())
+ assert any(f'{report["metrics"]["model_accuracy"]:.1%}' == metric.value for metric in dashboard.metric)
+ assert any("Final team project completed at Le Wagon" in m.value for m in dashboard.markdown)
