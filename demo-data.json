@@ -221,68 +221,36 @@
   "forecast": [
     {
       "week_bucket": 1,
-      "forecast_cash": 83680.96
+      "forecast_cash": 102642.51
     },
     {
       "week_bucket": 2,
-      "forecast_cash": 35076.17
+      "forecast_cash": 40981.4
     },
     {
       "week_bucket": 3,
-      "forecast_cash": 24219.52
+      "forecast_cash": 20203.38
     },
     {
       "week_bucket": 4,
-      "forecast_cash": 20015.42
+      "forecast_cash": 16568.92
     },
     {
       "week_bucket": 5,
-      "forecast_cash": 15908.35
+      "forecast_cash": 9682.39
     },
     {
       "week_bucket": 6,
-      "forecast_cash": 11489.66
+      "forecast_cash": 7442.57
     },
     {
       "week_bucket": 7,
-      "forecast_cash": 18013.72
+      "forecast_cash": 10882.62
     }
   ],
   "rankings": [
     {
       "collections_rank": 1,
-      "doc_id": "INV-0023",
-      "cust_number": "C010",
-      "name_customer": "Example Customer 10",
-      "total_open_amount": 19137.07,
-      "due_in_date": "2024-10-19T00:00:00.000",
-      "days_past_due": -18,
-      "days_overdue": 0,
-      "risk_category": "Medium",
-      "risk_score": 0.4117613203,
-      "priority_score": 7879.90520893,
-      "predicted_bucket": 3,
-      "cust_late_ratio": 1.0,
-      "cust_n_transactions": 55
-    },
-    {
-      "collections_rank": 2,
-      "doc_id": "INV-0021",
-      "cust_number": "C026",
-      "name_customer": "Example Customer 26",
-      "total_open_amount": 31534.06,
-      "due_in_date": "2024-09-01T00:00:00.000",
-      "days_past_due": 30,
-      "days_overdue": 30,
-      "risk_category": "Low",
-      "risk_score": 0.1074475223,
-      "priority_score": 6776.5132301225,
-      "predicted_bucket": 1,
-      "cust_late_ratio": 1.0,
-      "cust_n_transactions": 50
-    },
-    {
-      "collections_rank": 3,
       "doc_id": "INV-0020",
       "cust_number": "C014",
       "name_customer": "Example Customer 14",
@@ -291,11 +259,43 @@
       "days_past_due": -30,
       "days_overdue": 0,
       "risk_category": "High",
-      "risk_score": 0.7613526849,
-      "priority_score": 6657.3820796641,
+      "risk_score": 0.913189054,
+      "priority_score": 7985.0620662615,
       "predicted_bucket": 7,
       "cust_late_ratio": 1.0,
       "cust_n_transactions": 62
+    },
+    {
+      "collections_rank": 2,
+      "doc_id": "INV-0023",
+      "cust_number": "C010",
+      "name_customer": "Example Customer 10",
+      "total_open_amount": 19137.07,
+      "due_in_date": "2024-10-19T00:00:00.000",
+      "days_past_due": -18,
+      "days_overdue": 0,
+      "risk_category": "Medium",
+      "risk_score": 0.30366338,
+      "priority_score": 5811.2273595292,
+      "predicted_bucket": 4,
+      "cust_late_ratio": 1.0,
+      "cust_n_transactions": 55
+    },
+    {
+      "collections_rank": 3,
+      "doc_id": "INV-0002",
+      "cust_number": "C020",
+      "name_customer": "Example Customer 20",
+      "total_open_amount": 6721.52,
+      "due_in_date": "2024-10-25T00:00:00.000",
+      "days_past_due": -24,
+      "days_overdue": 0,
+      "risk_category": "High",
+      "risk_score": 0.7916556667,
+      "priority_score": 5321.1293968005,
+      "predicted_bucket": 7,
+      "cust_late_ratio": 1.0,
+      "cust_n_transactions": 53
     },
     {
       "collections_rank": 4,
@@ -307,62 +307,30 @@
       "days_past_due": -23,
       "days_overdue": 0,
       "risk_category": "Medium",
-      "risk_score": 0.4781869984,
-      "priority_score": 4365.9907510697,
+      "risk_score": 0.4688837815,
+      "priority_score": 4281.0495899758,
       "predicted_bucket": 4,
       "cust_late_ratio": 1.0,
       "cust_n_transactions": 42
     },
     {
       "collections_rank": 5,
-      "doc_id": "INV-0002",
-      "cust_number": "C020",
-      "name_customer": "Example Customer 20",
-      "total_open_amount": 6721.52,
-      "due_in_date": "2024-10-25T00:00:00.000",
-      "days_past_due": -24,
+      "doc_id": "INV-0015",
+      "cust_number": "C015",
+      "name_customer": "Example Customer 15",
+      "total_open_amount": 4520.6,
+      "due_in_date": "2024-10-04T00:00:00.000",
+      "days_past_due": -3,
       "days_overdue": 0,
-      "risk_category": "High",
-      "risk_score": 0.5857262157,
-      "priority_score": 3936.970473283,
-      "predicted_bucket": 7,
+      "risk_category": "Medium",
+      "risk_score": 0.418654114,
+      "priority_score": 1892.5677875293,
+      "predicted_bucket": 4,
       "cust_late_ratio": 1.0,
-      "cust_n_transactions": 53
+      "cust_n_transactions": 52
     },
     {
       "collections_rank": 6,
-      "doc_id": "INV-0011",
-      "cust_number": "C009",
-      "name_customer": "Example Customer 09",
-      "total_open_amount": 23409.53,
-      "due_in_date": "2024-09-04T00:00:00.000",
-      "days_past_due": 27,
-      "days_overdue": 27,
-      "risk_category": "Low",
-      "risk_score": 0.1102490069,
-      "priority_score": 3871.3161522835,
-      "predicted_bucket": 1,
-      "cust_late_ratio": 1.0,
-      "cust_n_transactions": 55
-    },
-    {
-      "collections_rank": 7,
-      "doc_id": "INV-0014",
-      "cust_number": "C000",
-      "name_customer": "Example Customer 00",
-      "total_open_amount": 19621.67,
-      "due_in_date": "2024-08-31T00:00:00.000",
-      "days_past_due": 31,
-      "days_overdue": 31,
-      "risk_category": "Low",
-      "risk_score": 0.0968264049,
-      "priority_score": 3799.7915297747,
-      "predicted_bucket": 1,
-      "cust_late_ratio": 1.0,
-      "cust_n_transactions": 50
-    },
-    {
-      "collections_rank": 8,
       "doc_id": "INV-0018",
       "cust_number": "C025",
       "name_customer": "Example Customer 25",
@@ -370,15 +338,15 @@
       "due_in_date": "2024-10-13T00:00:00.000",
       "days_past_due": -12,
       "days_overdue": 0,
-      "risk_category": "Medium",
-      "risk_score": 0.2835635499,
-      "priority_score": 2449.0674900251,
-      "predicted_bucket": 2,
+      "risk_category": "Low",
+      "risk_score": 0.147608053,
+      "priority_score": 1274.8538520451,
+      "predicted_bucket": 3,
       "cust_late_ratio": 1.0,
       "cust_n_transactions": 56
     },
     {
-      "collections_rank": 9,
+      "collections_rank": 7,
       "doc_id": "INV-0017",
       "cust_number": "C004",
       "name_customer": "Example Customer 04",
@@ -387,14 +355,30 @@
       "days_past_due": 5,
       "days_overdue": 5,
       "risk_category": "Low",
-      "risk_score": 0.1956255346,
-      "priority_score": 2124.3735829807,
+      "risk_score": 0.0575432254,
+      "priority_score": 624.8842114769,
       "predicted_bucket": 2,
       "cust_late_ratio": 1.0,
       "cust_n_transactions": 59
     },
     {
-      "collections_rank": 10,
+      "collections_rank": 8,
+      "doc_id": "INV-0004",
+      "cust_number": "C028",
+      "name_customer": "Example Customer 28",
+      "total_open_amount": 4728.23,
+      "due_in_date": "2024-09-28T00:00:00.000",
+      "days_past_due": 3,
+      "days_overdue": 3,
+      "risk_category": "Low",
+      "risk_score": 0.0776119781,
+      "priority_score": 440.3607395726,
+      "predicted_bucket": 2,
+      "cust_late_ratio": 1.0,
+      "cust_n_transactions": 39
+    },
+    {
+      "collections_rank": 9,
       "doc_id": "INV-0001",
       "cust_number": "C030",
       "name_customer": "Example Customer 30",
@@ -403,11 +387,27 @@
       "days_past_due": 21,
       "days_overdue": 21,
       "risk_category": "Low",
-      "risk_score": 0.1339340238,
-      "priority_score": 1904.1822049717,
+      "risk_score": 0.0178720606,
+      "priority_score": 254.0927148401,
       "predicted_bucket": 1,
       "cust_late_ratio": 1.0,
       "cust_n_transactions": 52
+    },
+    {
+      "collections_rank": 10,
+      "doc_id": "INV-0008",
+      "cust_number": "C007",
+      "name_customer": "Example Customer 07",
+      "total_open_amount": 5025.33,
+      "due_in_date": "2024-09-05T00:00:00.000",
+      "days_past_due": 26,
+      "days_overdue": 26,
+      "risk_category": "Low",
+      "risk_score": 0.0183291393,
+      "priority_score": 138.164960456,
+      "predicted_bucket": 1,
+      "cust_late_ratio": 1.0,
+      "cust_n_transactions": 54
     }
   ],
   "predictions": [
@@ -415,346 +415,316 @@
       "doc_id": "INV-0001",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.3829120583007364,
-        "week_2": 0.29977719447427814,
-        "week_3": 0.12258331326239956,
-        "week_4": 0.06079341020552193,
-        "week_5": 0.04922375321354267,
-        "week_6": 0.032505778307375006,
-        "week_7": 0.05220449223614633
+        "week_1": 0.4443942809378179,
+        "week_2": 0.3908282141171183,
+        "week_3": 0.10882445516675063,
+        "week_4": 0.03808098920709582,
+        "week_5": 0.010118452364753361,
+        "week_6": 0.006213040104549541,
+        "week_7": 0.0015405681019144929
       }
     },
     {
       "doc_id": "INV-0002",
       "predicted_bucket": 7,
       "bucket_probabilities": {
-        "week_1": 0.07674654172937727,
-        "week_2": 0.07802161167449294,
-        "week_3": 0.07466592995329567,
-        "week_4": 0.18483970095308194,
-        "week_5": 0.16055069026459134,
-        "week_6": 0.17579407073141265,
-        "week_7": 0.24938145469374817
+        "week_1": 0.027580300988319855,
+        "week_2": 0.016673685983827492,
+        "week_3": 0.04597458010897603,
+        "week_4": 0.11811576622436137,
+        "week_5": 0.1785330988087449,
+        "week_6": 0.27362812452920426,
+        "week_7": 0.3394944433565662
       }
     },
     {
       "doc_id": "INV-0003",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.5271144489678947,
-        "week_2": 0.19635409043597396,
-        "week_3": 0.08410041747949862,
-        "week_4": 0.05946278177401877,
-        "week_5": 0.05022050421602836,
-        "week_6": 0.03262800338630377,
-        "week_7": 0.05011975374028178
+        "week_1": 0.6697886873542985,
+        "week_2": 0.18363434877056223,
+        "week_3": 0.08289748467855679,
+        "week_4": 0.03722460654984929,
+        "week_5": 0.012079872646733108,
+        "week_6": 0.012031249999999997,
+        "week_7": 0.0023437499999999995
       }
     },
     {
       "doc_id": "INV-0004",
       "predicted_bucket": 2,
       "bucket_probabilities": {
-        "week_1": 0.18386760285546033,
-        "week_2": 0.25836628579211873,
-        "week_3": 0.21319065908644103,
-        "week_4": 0.13941828854598742,
-        "week_5": 0.09915004633683694,
-        "week_6": 0.04707752895698872,
-        "week_7": 0.058929588426166815
+        "week_1": 0.14656154365023336,
+        "week_2": 0.34592063235942144,
+        "week_3": 0.3298848214570086,
+        "week_4": 0.10002102448295842,
+        "week_5": 0.050980634744265306,
+        "week_6": 0.024783960555269963,
+        "week_7": 0.001847382750842846
       }
     },
     {
       "doc_id": "INV-0005",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.3086552213609634,
-        "week_2": 0.2597548227233983,
-        "week_3": 0.17591079660701806,
-        "week_4": 0.10664365351058648,
-        "week_5": 0.06767547546567523,
-        "week_6": 0.031202592010955394,
-        "week_7": 0.05015743832140316
+        "week_1": 0.5576912392608132,
+        "week_2": 0.3206833498705525,
+        "week_3": 0.08160247169981293,
+        "week_4": 0.02565398750360324,
+        "week_5": 0.009325037246303725,
+        "week_6": 0.0003564144189144189,
+        "week_7": 0.0046875
       }
     },
     {
       "doc_id": "INV-0006",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.39015204587130003,
-        "week_2": 0.2248282609134548,
-        "week_3": 0.15878606474996382,
-        "week_4": 0.09705796313531523,
-        "week_5": 0.053156466145929844,
-        "week_6": 0.029154315878683404,
-        "week_7": 0.0468648833053529
+        "week_1": 0.6511345574803878,
+        "week_2": 0.29929346585936173,
+        "week_3": 0.03719729780325299,
+        "week_4": 0.006769011943426279,
+        "week_5": 0.0009181669135713255,
+        "week_6": 0.0,
+        "week_7": 0.004687500000000001
       }
     },
     {
       "doc_id": "INV-0007",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.6184334354724147,
-        "week_2": 0.15146224680330267,
-        "week_3": 0.07848365108337639,
-        "week_4": 0.04824947718575804,
-        "week_5": 0.036815856817866796,
-        "week_6": 0.025245561132532617,
-        "week_7": 0.04130977150474883
+        "week_1": 0.7987464176591247,
+        "week_2": 0.15146797365671774,
+        "week_3": 0.042221289016896556,
+        "week_4": 0.0074246137849079,
+        "week_5": 0.00013970588235294115,
+        "week_6": 0.0,
+        "week_7": 0.0
       }
     },
     {
       "doc_id": "INV-0008",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.47019539509478125,
-        "week_2": 0.22859660387104835,
-        "week_3": 0.09768817083469479,
-        "week_4": 0.0689179393739461,
-        "week_5": 0.0547887622696211,
-        "week_6": 0.03121803037273218,
-        "week_7": 0.04859509818317625
+        "week_1": 0.5371952067570706,
+        "week_2": 0.32521820566908155,
+        "week_3": 0.08959292533950336,
+        "week_4": 0.029664522926605215,
+        "week_5": 0.013316384205698514,
+        "week_6": 0.005012755102040817,
+        "week_7": 0.0
       }
     },
     {
       "doc_id": "INV-0009",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.3952571690789287,
-        "week_2": 0.232406672352453,
-        "week_3": 0.1549625373637298,
-        "week_4": 0.09233116965992495,
-        "week_5": 0.050751055765881306,
-        "week_6": 0.028634868135528742,
-        "week_7": 0.0456565276435535
+        "week_1": 0.640510342417491,
+        "week_2": 0.27579427173083954,
+        "week_3": 0.06288249052798231,
+        "week_4": 0.014673638307408003,
+        "week_5": 0.0013525506670727253,
+        "week_6": 9.920634920634917e-05,
+        "week_7": 0.004687499999999998
       }
     },
     {
       "doc_id": "INV-0010",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.6552611758296543,
-        "week_2": 0.13298914459604758,
-        "week_3": 0.0650315018815872,
-        "week_4": 0.04494361286419174,
-        "week_5": 0.03687353191790429,
-        "week_6": 0.025015447520575183,
-        "week_7": 0.03988558539003974
+        "week_1": 0.766537691963671,
+        "week_2": 0.2043056568208522,
+        "week_3": 0.019348905016838034,
+        "week_4": 0.009170384173409115,
+        "week_5": 0.0005927191680868152,
+        "week_6": 4.464285714285714e-05,
+        "week_7": 0.0
       }
     },
     {
       "doc_id": "INV-0011",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.5912612069560937,
-        "week_2": 0.17740902271604347,
-        "week_3": 0.07011818127684634,
-        "week_4": 0.050962582135642726,
-        "week_5": 0.04043769828893673,
-        "week_6": 0.026920834506078,
-        "week_7": 0.042890474120358985
+        "week_1": 0.754749324273618,
+        "week_2": 0.20275351328386718,
+        "week_3": 0.03344853554459088,
+        "week_4": 0.00850063900618618,
+        "week_5": 0.0005033450345950347,
+        "week_6": 4.464285714285715e-05,
+        "week_7": 0.0
       }
     },
     {
       "doc_id": "INV-0012",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.630819236399226,
-        "week_2": 0.13981496740856336,
-        "week_3": 0.08002574428815278,
-        "week_4": 0.04658378478463836,
-        "week_5": 0.035439042850919256,
-        "week_6": 0.025743753573635918,
-        "week_7": 0.04157347069486438
+        "week_1": 0.8152853052827458,
+        "week_2": 0.16197009037059298,
+        "week_3": 0.015540757516627769,
+        "week_4": 0.006972365348552059,
+        "week_5": 0.0002314814814814815,
+        "week_6": 0.0,
+        "week_7": 0.0
       }
     },
     {
       "doc_id": "INV-0013",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.5666008175019434,
-        "week_2": 0.16655472448362096,
-        "week_3": 0.094165104629112,
-        "week_4": 0.054818773515371885,
-        "week_5": 0.0433513684886941,
-        "week_6": 0.028131096583285633,
-        "week_7": 0.046378114797972055
+        "week_1": 0.6512492578346678,
+        "week_2": 0.2742137065591537,
+        "week_3": 0.04819403520660281,
+        "week_4": 0.02213807490927284,
+        "week_5": 0.004204925490302849,
+        "week_6": 0.0,
+        "week_7": 0.0
       }
     },
     {
       "doc_id": "INV-0014",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.6436626827239268,
-        "week_2": 0.13768686174637074,
-        "week_3": 0.07346304410278554,
-        "week_4": 0.0483610064936298,
-        "week_5": 0.03323389173925437,
-        "week_6": 0.02408161169184133,
-        "week_7": 0.03951090150219144
+        "week_1": 0.8180498728673788,
+        "week_2": 0.14943575717027524,
+        "week_3": 0.02356725498230372,
+        "week_4": 0.008844173803571597,
+        "week_5": 0.00010294117647058824,
+        "week_6": 0.0,
+        "week_7": 0.0
       }
     },
     {
       "doc_id": "INV-0015",
       "predicted_bucket": 4,
       "bucket_probabilities": {
-        "week_1": 0.14718301045957913,
-        "week_2": 0.1077906821746125,
-        "week_3": 0.18331409307889293,
-        "week_4": 0.19783190645903698,
-        "week_5": 0.16020681857292285,
-        "week_6": 0.12626993185766294,
-        "week_7": 0.07740355739729265
+        "week_1": 0.07254744918073192,
+        "week_2": 0.055647721305147724,
+        "week_3": 0.20822672829319067,
+        "week_4": 0.24492398726940573,
+        "week_5": 0.21613051731415125,
+        "week_6": 0.14450480729390136,
+        "week_7": 0.058018789343471544
       }
     },
     {
       "doc_id": "INV-0016",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.6137896776199341,
-        "week_2": 0.1492682844400406,
-        "week_3": 0.0716070756316185,
-        "week_4": 0.05209871008992195,
-        "week_5": 0.04029186815023422,
-        "week_6": 0.02770403027534485,
-        "week_7": 0.04524035379290581
+        "week_1": 0.77246178018298,
+        "week_2": 0.17281585840689495,
+        "week_3": 0.0498046961025946,
+        "week_4": 0.00456439419139167,
+        "week_5": 0.0003086282589959061,
+        "week_6": 4.464285714285715e-05,
+        "week_7": 0.0
       }
     },
     {
       "doc_id": "INV-0017",
       "predicted_bucket": 2,
       "bucket_probabilities": {
-        "week_1": 0.17869715592299204,
-        "week_2": 0.27342301912705996,
-        "week_3": 0.21291618287097122,
-        "week_4": 0.13933810747420164,
-        "week_5": 0.09185873819729766,
-        "week_6": 0.04558719000504006,
-        "week_7": 0.05817960640243746
+        "week_1": 0.1799596441686857,
+        "week_2": 0.3859404433459084,
+        "week_3": 0.2689008621619372,
+        "week_4": 0.10765582491547011,
+        "week_5": 0.041939378347799976,
+        "week_6": 0.009964699372248897,
+        "week_7": 0.0056391476879497655
       }
     },
     {
       "doc_id": "INV-0018",
-      "predicted_bucket": 2,
+      "predicted_bucket": 3,
       "bucket_probabilities": {
-        "week_1": 0.07946112302918446,
-        "week_2": 0.27369625395895,
-        "week_3": 0.19918120649386967,
-        "week_4": 0.1640978665686349,
-        "week_5": 0.1353605141997529,
-        "week_6": 0.05693559560684843,
-        "week_7": 0.09126744014275968
+        "week_1": 0.12053974818723946,
+        "week_2": 0.22052116305767105,
+        "week_3": 0.3198937817232359,
+        "week_4": 0.19143725399742895,
+        "week_5": 0.06862013970836262,
+        "week_6": 0.05010852334469857,
+        "week_7": 0.028879389981363673
       }
     },
     {
       "doc_id": "INV-0019",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.6181931760505643,
-        "week_2": 0.15683206097620986,
-        "week_3": 0.06741403332077482,
-        "week_4": 0.04720341243907527,
-        "week_5": 0.03865277560244098,
-        "week_6": 0.027789353652214882,
-        "week_7": 0.04391518795871981
+        "week_1": 0.7578115570435444,
+        "week_2": 0.19225951515893172,
+        "week_3": 0.0332701525449987,
+        "week_4": 0.009019886363636365,
+        "week_5": 0.0041666666666666675,
+        "week_6": 0.0020833333333333337,
+        "week_7": 0.001388888888888889
       }
     },
     {
       "doc_id": "INV-0020",
       "predicted_bucket": 7,
       "bucket_probabilities": {
-        "week_1": 0.06298544791762146,
-        "week_2": 0.06128998640324966,
-        "week_3": 0.06100820172923127,
-        "week_4": 0.053363679050381814,
-        "week_5": 0.11159117145716942,
-        "week_6": 0.10536078010407456,
-        "week_7": 0.5444007333382719
+        "week_1": 0.033443396226415095,
+        "week_2": 0.005512971698113207,
+        "week_3": 0.02736522911051213,
+        "week_4": 0.020489348996129655,
+        "week_5": 0.05197455138167031,
+        "week_6": 0.13103723108274032,
+        "week_7": 0.7301772715044194
       }
     },
     {
       "doc_id": "INV-0021",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.6198635835915115,
-        "week_2": 0.15448072897972306,
-        "week_3": 0.06878061746315547,
-        "week_4": 0.0494275476655561,
-        "week_5": 0.03977787956098943,
-        "week_6": 0.026430149222094176,
-        "week_7": 0.04123949351697028
+        "week_1": 0.7076342923422352,
+        "week_2": 0.23266200206121718,
+        "week_3": 0.042111507437489135,
+        "week_4": 0.017275691748802214,
+        "week_5": 0.0002718635531135531,
+        "week_6": 4.464285714285714e-05,
+        "week_7": 0.0
       }
     },
     {
       "doc_id": "INV-0022",
       "predicted_bucket": 1,
       "bucket_probabilities": {
-        "week_1": 0.437806447495376,
-        "week_2": 0.24388868561635868,
-        "week_3": 0.13494193252305836,
-        "week_4": 0.06513367447703314,
-        "week_5": 0.043369754179498086,
-        "week_6": 0.02880169014330901,
-        "week_7": 0.04605781556536669
+        "week_1": 0.7287633110554437,
+        "week_2": 0.21765060504283884,
+        "week_3": 0.03757931296591826,
+        "week_4": 0.008615050763388355,
+        "week_5": 0.005172517273859982,
+        "week_6": 0.0022192028985507234,
+        "week_7": 0.0
       }
     },
     {
       "doc_id": "INV-0023",
-      "predicted_bucket": 3,
+      "predicted_bucket": 4,
       "bucket_probabilities": {
-        "week_1": 0.08255988790034663,
-        "week_2": 0.08210535030616412,
-        "week_3": 0.22973048395002924,
-        "week_4": 0.1938429575927608,
-        "week_5": 0.1650786485936533,
-        "week_6": 0.1307179548965818,
-        "week_7": 0.11596471676046415
+        "week_1": 0.08386532738095237,
+        "week_2": 0.04250444969654527,
+        "week_3": 0.2495390234248012,
+        "week_4": 0.3204278194959984,
+        "week_5": 0.18026458793650108,
+        "week_6": 0.0762200169912898,
+        "week_7": 0.04717877507391177
       }
     },
     {
       "doc_id": "INV-0024",
       "predicted_bucket": 4,
       "bucket_probabilities": {
-        "week_1": 0.09488084237933786,
-        "week_2": 0.09489876847638762,
-        "week_3": 0.08337011250384235,
-        "week_4": 0.24866327828663048,
-        "week_5": 0.17405244837740397,
-        "week_6": 0.1541603815120487,
-        "week_7": 0.14997416846434897
+        "week_1": 0.048125,
+        "week_2": 0.04304924242424242,
+        "week_3": 0.0910103456181105,
+        "week_4": 0.34893163048543313,
+        "week_5": 0.22486390924547686,
+        "week_6": 0.1751120480538016,
+        "week_7": 0.06890782417293553
       }
     }
   ],
   "drafts": {
-    "INV-0023": {
-      "action": "draft_email",
-      "stage": "upcoming_reminder",
-      "tone": "friendly",
-      "priority": "low",
-      "subject": "Payment follow-up \u2014 INV-0023",
-      "email_body": "Dear Example Customer 10,\n\nRegarding invoice INV-0023 for $19,137.07, due on 2024-10-19.\n\nPlease let us know if you need a copy of the invoice or payment details.\n\nKind regards,\nAccounts Receivable Team",
-      "reasoning": "Local demonstration policy: 0 days overdue. Human review required.",
-      "playbook_reference": "demo_policy.md",
-      "provider": "local_rules",
-      "doc_id": "INV-0023",
-      "retrieved_sections": [
-        "demo_policy.md"
-      ]
-    },
-    "INV-0021": {
-      "action": "draft_email",
-      "stage": "overdue_follow_up",
-      "tone": "neutral",
-      "priority": "medium",
-      "subject": "Payment follow-up \u2014 INV-0021",
-      "email_body": "Dear Example Customer 26,\n\nRegarding invoice INV-0021 for $31,534.06, due on 2024-09-01.\n\nPlease confirm the expected payment date or let us know of any billing issue.\n\nKind regards,\nAccounts Receivable Team",
-      "reasoning": "Local demonstration policy: 30 days overdue. Human review required.",
-      "playbook_reference": "demo_policy.md",
-      "provider": "local_rules",
-      "doc_id": "INV-0021",
-      "retrieved_sections": [
-        "demo_policy.md"
-      ]
-    },
     "INV-0020": {
       "action": "draft_email",
       "stage": "upcoming_reminder",
@@ -770,17 +740,17 @@
         "demo_policy.md"
       ]
     },
-    "INV-0024": {
+    "INV-0023": {
       "action": "draft_email",
       "stage": "upcoming_reminder",
       "tone": "friendly",
       "priority": "low",
-      "subject": "Payment follow-up \u2014 INV-0024",
-      "email_body": "Dear Example Customer 08,\n\nRegarding invoice INV-0024 for $9,130.30, due on 2024-10-24.\n\nPlease let us know if you need a copy of the invoice or payment details.\n\nKind regards,\nAccounts Receivable Team",
+      "subject": "Payment follow-up \u2014 INV-0023",
+      "email_body": "Dear Example Customer 10,\n\nRegarding invoice INV-0023 for $19,137.07, due on 2024-10-19.\n\nPlease let us know if you need a copy of the invoice or payment details.\n\nKind regards,\nAccounts Receivable Team",
       "reasoning": "Local demonstration policy: 0 days overdue. Human review required.",
       "playbook_reference": "demo_policy.md",
       "provider": "local_rules",
-      "doc_id": "INV-0024",
+      "doc_id": "INV-0023",
       "retrieved_sections": [
         "demo_policy.md"
       ]
@@ -800,32 +770,32 @@
         "demo_policy.md"
       ]
     },
-    "INV-0011": {
+    "INV-0024": {
       "action": "draft_email",
-      "stage": "overdue_follow_up",
-      "tone": "neutral",
-      "priority": "medium",
-      "subject": "Payment follow-up \u2014 INV-0011",
-      "email_body": "Dear Example Customer 09,\n\nRegarding invoice INV-0011 for $23,409.53, due on 2024-09-04.\n\nPlease confirm the expected payment date or let us know of any billing issue.\n\nKind regards,\nAccounts Receivable Team",
-      "reasoning": "Local demonstration policy: 27 days overdue. Human review required.",
+      "stage": "upcoming_reminder",
+      "tone": "friendly",
+      "priority": "low",
+      "subject": "Payment follow-up \u2014 INV-0024",
+      "email_body": "Dear Example Customer 08,\n\nRegarding invoice INV-0024 for $9,130.30, due on 2024-10-24.\n\nPlease let us know if you need a copy of the invoice or payment details.\n\nKind regards,\nAccounts Receivable Team",
+      "reasoning": "Local demonstration policy: 0 days overdue. Human review required.",
       "playbook_reference": "demo_policy.md",
       "provider": "local_rules",
-      "doc_id": "INV-0011",
+      "doc_id": "INV-0024",
       "retrieved_sections": [
         "demo_policy.md"
       ]
     },
-    "INV-0014": {
+    "INV-0015": {
       "action": "draft_email",
-      "stage": "overdue_follow_up",
-      "tone": "firm",
-      "priority": "high",
-      "subject": "Payment follow-up \u2014 INV-0014",
-      "email_body": "Dear Example Customer 00,\n\nRegarding invoice INV-0014 for $19,621.67, due on 2024-08-31.\n\nPlease confirm the expected payment date or let us know of any billing issue.\n\nKind regards,\nAccounts Receivable Team",
-      "reasoning": "Local demonstration policy: 31 days overdue. Human review required.",
+      "stage": "upcoming_reminder",
+      "tone": "friendly",
+      "priority": "low",
+      "subject": "Payment follow-up \u2014 INV-0015",
+      "email_body": "Dear Example Customer 15,\n\nRegarding invoice INV-0015 for $4,520.60, due on 2024-10-04.\n\nPlease let us know if you need a copy of the invoice or payment details.\n\nKind regards,\nAccounts Receivable Team",
+      "reasoning": "Local demonstration policy: 0 days overdue. Human review required.",
       "playbook_reference": "demo_policy.md",
       "provider": "local_rules",
-      "doc_id": "INV-0014",
+      "doc_id": "INV-0015",
       "retrieved_sections": [
         "demo_policy.md"
       ]
@@ -860,6 +830,21 @@
         "demo_policy.md"
       ]
     },
+    "INV-0004": {
+      "action": "draft_email",
+      "stage": "overdue_follow_up",
+      "tone": "friendly",
+      "priority": "medium",
+      "subject": "Payment follow-up \u2014 INV-0004",
+      "email_body": "Dear Example Customer 28,\n\nRegarding invoice INV-0004 for $4,728.23, due on 2024-09-28.\n\nPlease confirm the expected payment date or let us know of any billing issue.\n\nKind regards,\nAccounts Receivable Team",
+      "reasoning": "Local demonstration policy: 3 days overdue. Human review required.",
+      "playbook_reference": "demo_policy.md",
+      "provider": "local_rules",
+      "doc_id": "INV-0004",
+      "retrieved_sections": [
+        "demo_policy.md"
+      ]
+    },
     "INV-0001": {
       "action": "draft_email",
       "stage": "overdue_follow_up",
@@ -874,26 +859,43 @@
       "retrieved_sections": [
         "demo_policy.md"
       ]
+    },
+    "INV-0008": {
+      "action": "draft_email",
+      "stage": "overdue_follow_up",
+      "tone": "neutral",
+      "priority": "medium",
+      "subject": "Payment follow-up \u2014 INV-0008",
+      "email_body": "Dear Example Customer 07,\n\nRegarding invoice INV-0008 for $5,025.33, due on 2024-09-05.\n\nPlease confirm the expected payment date or let us know of any billing issue.\n\nKind regards,\nAccounts Receivable Team",
+      "reasoning": "Local demonstration policy: 26 days overdue. Human review required.",
+      "playbook_reference": "demo_policy.md",
+      "provider": "local_rules",
+      "doc_id": "INV-0008",
+      "retrieved_sections": [
+        "demo_policy.md"
+      ]
     }
   },
   "metrics": {
-    "schema_version": 2,
+    "schema_version": 3,
     "dataset": "synthetic, seed 42",
+    "estimator": "RandomForestClassifier",
+    "temporal_split_fraction": 0.8,
     "reference_date": "2024-10-01",
-    "training_cutoff": "2024-03-17",
-    "training_rows": 5841,
-    "holdout_rows": 2557,
+    "training_cutoff": "2024-05-19",
+    "training_rows": 6689,
+    "holdout_rows": 1700,
     "known_labels_only": true,
     "metrics": {
-      "model_accuracy": 0.4517012123582323,
-      "baseline_accuracy": 0.18771998435666798,
-      "model_log_loss": 1.4341014313422338,
-      "baseline_log_loss": 1.9158481654418178,
-      "forecast_mae_weekly": 36525.20851851851,
-      "forecast_mape_weekly": 0.851111111111111,
-      "forecast_total_actual_cf": 604293.7959259258,
-      "forecast_total_forecast_cf": 592703.6159259259,
-      "forecast_total_cf_difference": -11590.179999999997
+      "model_accuracy": 0.4447058823529412,
+      "baseline_accuracy": 0.18235294117647058,
+      "model_log_loss": 1.271843981480559,
+      "baseline_log_loss": 1.9157866789915459,
+      "forecast_mae_weekly": 29343.798333333332,
+      "forecast_mape_weekly": 0.4038888888888889,
+      "forecast_total_actual_cf": 608532.3027777779,
+      "forecast_total_forecast_cf": 615047.88,
+      "forecast_total_cf_difference": 6515.577222222223
     },
     "limitation": "Synthetic demonstration, these metrics do not establish real-world performance."
   }
